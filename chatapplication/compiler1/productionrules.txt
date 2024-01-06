@@ -1,0 +1,22 @@
+    Start: The starting rule that represents the top-level of your grammar. It calculates an expression and prints the result.
+
+    Expression: Represents an arithmetic expression, which can be a sequence of terms separated by addition or subtraction operators.
+     It calculates the result by performing addition or subtraction on terms.
+
+    Term: Represents a term in an expression, which can be a sequence of factors separated by multiplication or division operators.
+     It calculates the result by performing multiplication or division on factors.
+
+    Factor: Represents the most basic elements in the grammar. 
+    A factor can be a number or an expression enclosed within parentheses.
+
+The grammar's production rules are as follows:
+
+    Start -> Expression
+    Expression -> Term ((PLUS | MINUS) Term)*
+    Term -> Factor ((MULTIPLY | DIVIDE) Factor)*
+    Factor -> NUMBER | LPAREN Expression RPAREN
+
+These rules define the structure of arithmetic expressions and how different components of the expressions are combined and evaluated.
+ When you input an arithmetic expression, the parser will use these rules to parse and evaluate the expression accordingly.
+
+ 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IdeaProjects.iml" filepath="$PROJECT_DIR$/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arrays/arrays.iml" filepath="$PROJECT_DIR$/arrays/arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatapplication/chatapplication.iml" filepath="$PROJECT_DIR$/chatapplication/chatapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/litcode/litcode.iml" filepath="$PROJECT_DIR$/litcode/litcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mersort/mersort.iml" filepath="$PROJECT_DIR$/mersort/mersort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/palindrome/palindrome.iml" filepath="$PROJECT_DIR$/palindrome/palindrome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reversingarray/reversingarray.iml" filepath="$PROJECT_DIR$/reversingarray/reversingarray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/singlyl_inked_lists/singlyl_inked_lists.iml" filepath="$PROJECT_DIR$/singlyl_inked_lists/singlyl_inked_lists.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timecomplexity/timecomplexity.iml" filepath="$PROJECT_DIR$/timecomplexity/timecomplexity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled4/untitled4.iml" filepath="$PROJECT_DIR$/untitled4/untitled4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled5/untitled5.iml" filepath="$PROJECT_DIR$/untitled5/untitled5.iml" />
+    </modules>
+  </component>
+</project>

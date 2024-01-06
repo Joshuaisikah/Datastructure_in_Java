@@ -1,0 +1,87 @@
+options {
+    LOOKAHEAD=1;
+    // Specifies the maximum number of tokens to look ahead when parsing. In this case, it's 2.
+}
+
+PARSER_BEGIN(ArithmeticParser)
+
+public class ArithmeticParser {
+    public static void main(String[] args) throws ParseException {
+        ArithmeticParser parser = new ArithmeticParser(System.in);
+        parser.Start();// Entry point for parsing the input.
+    }
+}
+
+PARSER_END(ArithmeticParser)
+
+TOKEN : {
+    <NUMBER: (["0"-"9"])+>               // Defines a regular expression for matching numbers.
+    | <PLUS: "+">                         // Token for the plus symbol.
+    | <MINUS: "-">                        // Token for the minu symbol.
+    | <MULTIPLY: "*">                     // Token for the multiplication  symbol.
+    | <DIVIDE: "/">                        // Token for the division symbol.
+    | <LPAREN: "(">                        // Token for the left parenthesis.
+    | <RPAREN: ")">                       // Token for the right parenthesis.
+}
+
+void Start():
+{
+    int result;
+    // Declare an integer variable to store the result of the expression.
+}
+{
+    result = Expression()
+    // Call the Expression method and store the result in the 'result' variable.
+    { System.out.println("Result: " + result); }
+     // Print the result.
+}
+
+int Expression():
+{
+    int left, right;
+    // Declare integer variables to store the left and right operands.
+    Token op;
+     // Declare a Token variable to store the operator.
+}
+{
+    left = Term()
+     // Call the Term method and store the result in 'left'.
+    (
+        op = <PLUS> right = Term()      
+        // If a '+' operator is encountered, call Term and store the result in 'right'. Then, add 'right' to 'left'.
+        { left += right; }
+      | op = <MINUS> right = Term()
+      // If a '-' operator is encountered, call Term and subtract 'right' from 'left'.
+
+        { left -= right; }
+    )*
+    { return left; }// Return the final result of the term.
+}
+
+int Term():
+{
+    int left, right;
+    Token op;
+}
+{
+    left = Factor()
+    (
+        op = <MULTIPLY> right = Factor()
+        { left *= right; }
+      | op = <DIVIDE> right = Factor()
+        { left /= right; }
+    )*
+    { return left; }
+}
+
+int Factor():
+{
+    Token t; // Declare a Token variable.
+}
+{
+    (
+        t = <NUMBER>//If a number is encountered, convert it to an integer and return it.
+        { return Integer.parseInt(t.image); }
+      | t = <LPAREN> Expression() t = <RPAREN> // If parentheses are encountered, evaluate the expression inside the parentheses.
+    )
+}
